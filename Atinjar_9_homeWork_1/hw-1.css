@@ -1,3 +1,14 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+    overscroll-behavior: none;
+}
+
 #navigation-bar {
     list-style-type: none;
     margin-top: 0;
@@ -51,7 +62,7 @@ body {
 
 /*TODO: is this needed?*/
 #navigation-bar li a {
-    padding: 20px;
+    padding: 15px;
     font-size: 23px;
     font-family: Comfortaa;
     color: #fdfbfa;
@@ -84,7 +95,7 @@ li:before {
 .line {
     background-color: #D91111;
     margin: 0;
-    height: 1px;
+    height: 2px;
     border: none;
 }
 
@@ -248,6 +259,7 @@ li:before {
 
 .section-two-headings {
     font-family: Comfortaa;
+    text-align: left;
     font-weight: lighter;
     color: #ffffff;
     font-size: medium;
@@ -296,7 +308,7 @@ li:before {
     color: white;
     font-family: Comfortaa;
     text-align: center;
-    margin-right: 360px;
+    margin-right: 340px;
     margin-top: 20px;
 }
 

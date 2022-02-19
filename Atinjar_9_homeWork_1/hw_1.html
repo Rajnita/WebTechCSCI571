@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Homework-1</title>
+    <link rel="stylesheet" type="text/css" href="hw-1.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+</head>
+
+<body>
+
+<div id="sticky_bar">
+    <hr class="line">
+</div>
+
+
+<div class="main">
+    <ul id="navigation-bar">
+        <li><a href="hw_1.html">Home</a></li>
+        <li><a href="page_not_found.html">Explore</a></li>
+        <li><a href="page_not_found.html">Contact</a></li>
+    </ul>
+
+
+    <div id="rodeo-drive">
+        <img id=rodeo-drive-img src="images/rodeo-drive.jpg" alt="Rodeo Drive">
+        <div class="centered">LA - The City of Angels</div>
+    </div>
+
+
+    <div id="gridContainer">
+        <!--Filled using javascript-->
+    </div>
+    <div id="section-3">
+        <div id="s3-para">
+            <!--Filled using javascript-->
+        </div>
+        <div>
+            <img id="section-3-img" src="images/lasky.png" alt="Lasky">
+        </div>
+    </div>
+
+    <div id="section-4-a">
+        <div class="s4-para">
+            <!--Filled using javascript-->
+        </div>
+        <div class="s4-image">
+            <!--Filled using javascript-->
+        </div>
+    </div>
+
+    <div id="section-4-b">
+        <div class="s4-para">
+            <!--Filled using javascript-->
+        </div>
+        <div class="s4-image">
+            <!--Filled using javascript-->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="left_footer">
+            <p>Tip the world over on its side and everything loose will land <br>in Los Angeles</p>
+            <!-- using span for dash symbol -->
+            <p style="margin:27px;"><b><span>&#8208;</span> Frank Lloyd Wright</b></p>
+        </div>
+        <div class="contact">
+            <p class="header">Designed By</p>
+            <p class="name">Rajnita Leichombam</p>
+            <a href=mailto:rleichom@usc.edu>rleichom@usc.edu</a><br>
+            <a href="tel:+12025550133">(+1) 202 555 0133</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    async function populate() {
+
+        const url = 'data.json';
+        const request = new Request(url);
+        const response = await fetch(request);
+        const data = await response.json();
+
+        populateSectionTwo(data);
+        populateSectionThree(data);
+        populateSectionFour(data);
+    }
+
+
+    function populateSectionFour(data) {
+        const section4 = data["section4"];
+        const textCollection = document.getElementsByClassName("s4-para");
+        textCollection[0].innerHTML = '<p class="s4_header">' + section4[0].heading + '</p>' + '<p>' + section4[0].text + '</p>';
+        textCollection[1].innerHTML = '<p class="s4_header" style="text-align:right;font-family: Montserrat">' + section4[1].heading + '</p>' + '<p>' + section4[1].text + '</p>';
+
+        const imagesDiv = document.getElementsByClassName("s4-image");
+        for (let i = 0; i < 2; i++) {
+            const img = document.createElement('img');
+            img.className = "section-4-img";
+            img.alt = "Section4 - Image";
+            img.src = 'images/' + section4[i].image;
+            imagesDiv[i].appendChild(img);
+        }
+    }
+
+    function populateSectionThree(data) {
+        console.log(data["section3"].text);
+        const section3TextList = data["section3"].text;
+        const div = document.getElementById('s3-para');
+
+        div.innerHTML = section3TextList[0] + '<br>' + '<br>' + section3TextList[1];
+    }
+
+    function populateSectionTwo(parsedData) {
+        const section2 = parsedData["section2"];
+        const grid = document.getElementById('gridContainer');
+
+        for (let i = 0; i < 3; i++) {
+            const div = document.createElement('div');
+            div.className = "cell" + i;
+
+            const img = document.createElement('img');
+            img.className = "section-two-images";
+            img.alt = "Placeholder image";
+            img.src = 'images/' + section2[i].image;
+
+            const textDiv = document.createElement('div');
+            textDiv.className = "section2_text_div";
+
+            const heading = document.createElement('h4');
+            heading.textContent = section2[i].heading;
+            heading.className = "section-two-headings";
+
+            const text = document.createElement('p');
+            text.textContent = section2[i].text;
+            text.className = "section-two-text"
+
+            textDiv.appendChild(heading)
+            textDiv.appendChild(text)
+
+
+            div.appendChild(img);
+            div.appendChild(textDiv);
+
+            grid.appendChild(div);
+        }
+    }
+
+    populate();
+
+</script>
+
+</body>
+</html>

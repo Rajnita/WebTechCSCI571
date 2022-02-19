@@ -1,0 +1,392 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+    overscroll-behavior: none;
+}
+
+#navigation-bar {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    background-color: #12141c;
+    text-align: center;
+    width: 1300px;
+    text-shadow: #fa7c20;
+}
+
+.main {
+    width: 1300px;
+    background-color: #212529;
+}
+
+body {
+    width: 1300px;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+}
+
+#sticky_bar {
+    position: fixed;
+    width: 1300px;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.section-2 {
+    width: 1300px;
+    background-color: #212529;
+    height: 680px
+}
+
+#rodeo-drive-img {
+    background-position: left bottom;
+    width: 1300px;
+    height: auto;
+
+}
+
+#navigation-bar li {
+    display: inline-block;
+    padding: 25px;
+
+}
+
+/*TODO: is this needed?*/
+#navigation-bar li a {
+    padding: 15px;
+    font-size: 23px;
+    font-family: Comfortaa;
+    color: #fdfbfa;
+    text-decoration-color: #f3761b;
+    text-decoration: none;
+    text-shadow: 1px 1px #f3761b;
+}
+
+/* Change the link color to #111 (black) on hover */
+#navigation-bar li a:hover {
+    color: #f3761b;
+    text-shadow: 1px 1px #fdfbfa;
+}
+
+li:before {
+    content: "+";
+    text-shadow: #fa7c20;
+    padding-right: 5px;
+}
+
+#rodeo-drive {
+    margin: 0px;
+    width: 1300px;
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 307px;
+}
+
+.line {
+    background-color: #D91111;
+    margin: 0;
+    height: 2px;
+    border: none;
+}
+
+
+#rodeo-drive-img {
+    width: 1300px;
+    height: 307px;
+    object-fit: cover;
+    object-position: 50% 85%;
+}
+
+#rodeo-drive .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    font-size: 32px;
+    text-shadow: 1px 1px #f8f6f5;
+    color: #f3761b;
+    font-weight: 500;
+}
+
+
+#gridContainer {
+    display: grid;
+    font-size: 10px;
+    text-align: center;
+    grid-template-areas:
+    "a b c";
+    /*Reduces gap between grid cells*/
+    width: 1300px;
+    background: #212529;
+    height: 683px;
+    margin: 0;
+    justify-items: center;
+}
+
+#section-3 {
+    background-color: #12141c;
+    height: 400px;
+    padding-top: 150px;
+}
+
+#section-3-img {
+    width: 444px;
+    height: 250px;
+    float: right;
+    margin-right: 196px;
+}
+
+.section-4-img {
+    width: 288px;
+    height: 192px;
+}
+
+#s3-para {
+    font-family: Comfortaa;
+    font-weight: lighter;
+    /*font-color: #ffffff;*/
+    font-size: 13px;
+    float: left;
+    color: white;
+    width: 439px;
+    text-align: justify;
+    margin-left: 195px;
+    line-height: 1.5;
+}
+
+.s4-para {
+    font-family: Comfortaa;
+    font-weight: 400;
+    font-size: 14px;
+    float: left;
+    color: white;
+    width: 600px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#section-4-a .s4-para {
+    float: right;
+    padding-right: 188px;
+}
+
+#section-4-b .s4-para {
+    float: left;
+    padding-left: 196px;
+}
+
+#section-4-a img {
+    float: left;
+    margin-left: 196px;
+}
+
+#section-4-b img {
+    float: right;
+    padding-right: 188px;
+}
+
+#section-4-a {
+    background-color: #212529;
+    height: 220px;
+    padding-top: 151px;
+}
+
+#section-4-b {
+    background-color: #212529;
+    height: 352px;
+}
+
+.section-three-text {
+    font-family: Comfortaa;
+    font-weight: lighter;
+    /*font-color: #ffffff;*/
+    font-size: 13px;
+}
+
+.section-three-image {
+    width: 170px;
+    height: 170px;
+    margin-left: 15px;
+    float: right;
+}
+
+.cell0 {
+    margin-top: 130px;
+    background-color: #12141c;
+    width: 289px;
+    grid-area: a;
+    height: 420px;
+    margin-left: 160px;
+    margin-right: -13px;
+}
+
+.cell1 {
+    margin-top: 130px;
+    background-color: #12141c;
+    width: 289px;
+    grid-area: b;
+    height: 420px;
+    margin-right: -13px;
+}
+
+.cell2 {
+    margin-top: 130px;
+    background-color: #12141c;
+    width: 289px;
+    grid-area: c;
+    height: 420px;
+    margin-right: 184px;
+}
+
+.section-two-text {
+    font-family: Comfortaa;
+    font-weight: lighter;
+    color: #ffffff;
+    font-size: 13.5px;
+    text-align: left;
+}
+
+.section-two-headings {
+    font-family: Comfortaa;
+    text-align: left;
+    font-weight: lighter;
+    color: #ffffff;
+    font-size: medium;
+}
+
+.section2_text_div {
+    width: 255px;
+    margin-left: 18px;
+}
+
+.section-two-images {
+    width: 255px;
+    height: 186px;
+    margin-top: 15px;
+    /*margin-left: 19px;*/
+    /*margin-right: 19px;*/
+}
+
+.s4_header {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.footer {
+    background-color: #12141c;
+    height: 200px;
+}
+
+.left_footer {
+    float: left;
+    margin-top: 65px;
+    margin-left: 195px;
+}
+
+.left_footer p {
+    color: white;
+    font-family: Comfortaa;
+    text-align: center;
+    font-size: 13px;
+}
+
+.contact {
+    float: right;
+    color: white;
+    font-family: Comfortaa;
+    text-align: center;
+    margin-right: 340px;
+    margin-top: 20px;
+}
+
+.contact p {
+    font-size: 13px;
+}
+
+.contact .name {
+    padding: 8px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.contact .header {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.not_found {
+    width: 1300px;
+    height: 310px;
+    position: relative;
+}
+
+.not_found .overlay {
+    /*background: rgba(186, 84 ,4, 0.8);*/
+    background: rgb(249, 113, 14);
+    /*background: rgba(147,83,45,0.8);*/
+    /*background:#c58a5f;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+
+.not_found .error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 500;
+    color: black;
+}
+
+.not_found img {
+    width: 1300px;
+    height: 310px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.message_block {
+    background-color: #212529;
+    height: 188px;
+}
+
+.message_block p {
+    font-family: Montserrat;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+}
+
+#error_line {
+    margin-top: 137px;
+}

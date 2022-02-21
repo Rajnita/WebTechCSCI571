@@ -60,13 +60,11 @@ body {
 
 }
 
-/*TODO: is this needed?*/
 #navigation-bar li a {
     padding: 15px;
     font-size: 23px;
     font-family: Comfortaa;
     color: #fdfbfa;
-    text-decoration-color: #f3761b;
     text-decoration: none;
     text-shadow: 1px 1px #f3761b;
 }
@@ -389,4 +387,36 @@ li:before {
 
 #error_line {
     margin-top: 137px;
+}
+
+#navigation-bar-404 {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    background-color: #12141c;
+    text-align: center;
+    width: 1300px;
+    text-shadow: #fa7c20;
+}
+
+#navigation-bar-404 li {
+    display: inline-block;
+    padding: 25px;
+
+}
+
+#navigation-bar-404 li a {
+    padding: 15px;
+    font-size: 23px;
+    font-family: Comfortaa;
+    color: #f3761b;
+    text-decoration: none;
+    text-shadow: 1px 1px #fdfbfa;
+}
+
+/* Change the link color to #111 (black) on hover */
+#navigation-bar-404 li a:hover {
+    color:#fdfbfa;
+    text-shadow: 1px 1px #f3761b;
 }

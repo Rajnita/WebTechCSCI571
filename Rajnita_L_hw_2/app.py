@@ -10,7 +10,7 @@ def load():
     return render_template("index.html")
 
 
-@app.route('/calculate', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def predict_blood_pressure():
     age = request.form['age']
     weight = request.form['weight']

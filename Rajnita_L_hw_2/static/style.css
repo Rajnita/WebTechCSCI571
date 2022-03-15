@@ -1,0 +1,86 @@
+input:focus {
+    outline: 2px solid blue;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin-right: -30px;
+    cursor: pointer;
+    padding: 5px 14px;
+    font-size: 18px;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overscroll-behavior: none;
+    width: 1440px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-image: url("medical-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1440px
+}
+
+input[type=number] {
+    height: 25px
+}
+
+#weight_id {
+    padding-left: 2px;
+}
+
+#text {
+    color: #bb0a0a;
+    font-weight: 5;
+    font-size: 23px;
+}
+
+
+#parent {
+    padding: 0px;
+    margin: 0px;
+    top: -22px;
+    background-image: url("medical-bg.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+label {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+span {
+    color: red;
+}
+
+h1 {
+    color: #bb0a0a;
+    padding-top: 30px;
+}
+
+h2 {
+    color: #bb0a0a;
+}
+
+
+#parent {
+    width: 1440px;
+    height: 1440px;
+    text-align: center;
+
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+}

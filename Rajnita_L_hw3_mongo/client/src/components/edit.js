@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router";
 
 export default function Edit() {
   const [form, setForm] = useState({
-    book: "",
+    title: "",
     author: "",
     genre: "",
     records: [],
@@ -47,7 +47,7 @@ export default function Edit() {
   async function onSubmit(e) {
     e.preventDefault();
     const editedBook = {
-      book: form.book,
+      title: form.title,
       author: form.author,
       genre: form.genre,
     };
@@ -70,13 +70,13 @@ export default function Edit() {
       <h3>Update Record</h3>
       <form onSubmit={onSubmit}>
         <div className="form-group">
-          <label htmlFor="book">Book: </label>
+          <label htmlFor="title">Title: </label>
           <input
             type="text"
             className="form-control"
-            id="book"
-            value={form.book}
-            onChange={(e) => updateForm({ book: e.target.value })}
+            id="title"
+            value={form.title}
+            onChange={(e) => updateForm({ title: e.target.value })}
           />
         </div>
         <div className="form-group">
@@ -94,37 +94,37 @@ export default function Edit() {
             <input
               className="form-check-input"
               type="radio"
-              book="authorOptions"
-              id="authorIntern"
+              name="authorOptions"
+              id="authorThriller"
               value="Thriller"
               checked={form.genre === "Thriller"}
               onChange={(e) => updateForm({ genre: e.target.value })}
             />
-            <label htmlFor="authorIntern" className="form-check-label">Thriller</label>
+            <label htmlFor="authorThriller" className="form-check-label">Thriller</label>
           </div>
           <div className="form-check form-check-inline">
             <input
               className="form-check-input"
               type="radio"
-              book="authorOptions"
-              id="authorJunior"
+              name="authorOptions"
+              id="authorClassic"
               value="Classics"
               checked={form.genre === "Classics"}
               onChange={(e) => updateForm({ genre: e.target.value })}
             />
-            <label htmlFor="authorJunior" className="form-check-label">Classics</label>
+            <label htmlFor="authorClassic" className="form-check-label">Classics</label>
           </div>
           <div className="form-check form-check-inline">
             <input
               className="form-check-input"
               type="radio"
-              book="authorOptions"
-              id="authorSenior"
+              name="authorOptions"
+              id="authorSci"
               value="Sci-fi"
               checked={form.genre === "Sci-fi"}
               onChange={(e) => updateForm({ genre: e.target.value })}
             />
-            <label htmlFor="authorSenior" className="form-check-label">Sci-fi</label>
+            <label htmlFor="authorSci" className="form-check-label">Sci-fi</label>
         </div>
         </div>
         <br />

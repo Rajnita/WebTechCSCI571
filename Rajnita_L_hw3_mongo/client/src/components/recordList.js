@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Record = (props) => (
   <tr>
-    <td>{props.record.book}</td>
+    <td>{props.record.title}</td>
     <td>{props.record.author}</td>
     <td>{props.record.genre}</td>
     <td>
@@ -68,11 +68,11 @@ export default function RecordList() {
   // This following section will display the table with the records of individuals.
   return (
     <div>
-      <h3>Record List</h3>
+      <h3>Book List</h3>
       <table className="table table-striped" style={{ marginTop: 20 }}>
         <thead>
           <tr>
-            <th>Book</th>
+            <th>Title</th>
             <th>Author</th>
             <th>Genre</th>
             <th>Action</th>

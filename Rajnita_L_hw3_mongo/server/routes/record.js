@@ -14,7 +14,7 @@ const ObjectId = require("mongodb").ObjectId;
 
 // This section will help you get a list of all the books.
 recordRoutes.route("/record").get(function (req, res) {
-  let db_connect = dbo.getDb("employees");
+  let db_connect = dbo.getDb("library");
   db_connect
     .collection("books")
     .find({})
@@ -40,7 +40,7 @@ recordRoutes.route("/record/:id").get(function (req, res) {
 recordRoutes.route("/record/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
-    book: req.body.book,
+    title: req.body.title,
     author: req.body.author,
     genre: req.body.genre,
   };
@@ -56,7 +56,7 @@ recordRoutes.route("/update/:id").post(function (req, response) {
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
     $set: {
-      book: req.body.book,
+      title: req.body.title,
       author: req.body.author,
       genre: req.body.genre,
     },

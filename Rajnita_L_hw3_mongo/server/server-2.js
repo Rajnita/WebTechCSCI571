@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // CHANGE the username,password,link to be yours!
 mongoose.connect('mongodb+srv://rajnita:webtechpwd@cluster0.gzlp0.mongodb.net/',{
-  dbName: 'mybusiness',
+  dbName: 'movie_library',
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
